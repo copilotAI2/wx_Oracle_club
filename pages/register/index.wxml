@@ -1,0 +1,14 @@
+<!--pages/register/index.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="loginContainer">
+        <view class="login_form">
+            <view class="nickname"><input type="text" name="input_nickname" placeholder="请输入昵称" value=""></input></view>
+            <view class="account"><input type="text" name="input_account" placeholder="请输入账号"></input></view>
+            <view class="psw"><input type="text" name="input_password" password="{{true}}" placeholder="请输入密码"></input></view>
+        </view>
+        <button form-type="submit">
+            注册
+        </button>
+        <button form-type="reset" class="reset">重新输入</button>
+    </view>
+</form>

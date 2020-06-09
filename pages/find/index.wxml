@@ -1,0 +1,33 @@
+<!--pages/find/index.wxml-->
+<SearchInput></SearchInput>
+<view>
+    <view class="top_img">
+        <navigator url="">
+            <image src="http://www.jgwbwg.com/cn/up/20160713042805ulnmi10u6splqsv7cz7av2le7prf7l.jpg" mode="widthFix"/>
+        </navigator>
+    </view>
+    <view class="article_list">
+        <view class="article_group">
+            <navigator class="article_item" url="/pages/article_info/index?articleId={{item.articleId}}"
+            wx:for="{{articleList}}"
+            wx:key="articleId">
+                <view class="article_info_wrap">
+                    <view class="article_title">{{item.title}}</view>
+                    <!-- <view class="articel_infodes"> -->
+                        <!-- <rich-text class="" nodes="{{item.content}}">
+                        </rich-text> -->
+                    <!-- </view> -->
+                    <view class="article_operation">
+                        <view class="author">作者:{{item.nickName}}</view>
+                        <view class="viewCount"><text class="iconfont icon-liulan" style="">{{item.viewCount}}</text></view>
+                        <view class="like"><text class="iconfont icon-dianzan1" >{{item.likeCount}}</text></view>
+                        <!-- <text class="iconfont icon-liulan" style="">{{item.viewCount}}</text> -->
+                        <!-- <text class="iconfont icon-pinglun" >66</text> -->
+                        <!-- <text class="iconfont icon-dianzan1" >{{item.likeCount}}</text> -->
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
+  

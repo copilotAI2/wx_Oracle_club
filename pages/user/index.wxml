@@ -1,0 +1,51 @@
+<!--pages/user/index.wxml-->
+<view class="user_info_wrap">
+    <view class="user_img_wrap">
+        <!-- <image class="user_bg" src="{{userInfo.avatarUrl}}"/> -->
+        <image class="user_bg" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1584359058&di=c03486904c57d2193eb0d29d802f635c&src=http://img3.doubanio.com/view/note/large/public/p35174351.jpg"/>
+        <!-- 用户头像和用户昵称 -->
+        <view class="user_info">
+            <!-- <image class="user_icon" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1584359058&di=c03486904c57d2193eb0d29d802f635c&src=http://img3.doubanio.com/view/note/large/public/p35174351.jpg"/> -->
+            <image class="user_icon" bind:tap="upAvatar" src="{{avatarUrl}}"/>
+            <view class="user_name">{{user.nickName}}</view>
+        </view>
+    </view>
+    <view class="user_btn" wx:if="{{!accountInfo.Guid}}">
+        <navigator url="/pages/login/index">
+            登录
+        </navigator>
+    </view>
+    <view wx:else class="user_welcome">
+        <text>欢迎来到甲骨文社区！</text>
+    </view>
+</view>
+
+<view class="user_content">
+    <view class="user_main">
+        <!-- 历史 -->
+        <view class="history_wrap">
+            <navigator url="/pages/collect/index">
+                <view class="his_num">{{likeCount}}</view>
+                <view class="his_name">我的点赞</view>
+            </navigator>
+            <navigator url="">
+                <view class="his_num iconfont icon-kefu"></view>
+                <view class="his_name">客服中心</view>
+                <button open-type="contact"></button>
+            </navigator>
+        </view>
+        <!-- 应用信息相关 -->
+        <view class="app_info_wrap">
+            <view class="app_info_item app_info_contact">
+                <text>联系电话</text>
+                <text>88888888</text>
+            </view>
+            <navigator url="/pages/feedback/index" class="app_info_item">意见反馈</navigator>
+            <navigator class="app_info_item">关于我们</navigator>
+        </view>
+        <!-- 推荐 -->
+        <navigator class="recommend_wrap">
+            把应用推荐给其他人
+        </navigator>
+    </view>
+</view>

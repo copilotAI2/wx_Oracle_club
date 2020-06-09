@@ -1,0 +1,30 @@
+<!--pages/login/index.wxml-->
+<!-- <view class="loginContainer">
+    <view class="title">欢迎登陆甲骨文社区</view>
+    <view class="login_form">
+        <view class="account"><input type="text" placeholder="请输入账号"></input></view>
+        <view class="psw"><input type="text" password="{{true}}" placeholder="请输入密码"></input></view>
+    </view>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        登录
+    </button>
+    <navigator class="GoToRegister" url="/pages/register/index" hover-class="navigator-hover" open-type="navigate">
+        没有账号？点击注册
+    </navigator>
+</view> -->
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="loginContainer">
+        <view class="title">欢迎登陆甲骨文社区</view>
+        <view class="login_form">
+            <view class="account"><input type="text" name="login_account" placeholder="请输入账号"></input></view>
+            <view class="psw"><input type="text" name="login_password" password="{{true}}" placeholder="请输入密码"></input></view>
+        </view>
+        <button form-type="submit">
+            登录
+        </button>
+        <navigator class="GoToRegister" url="/pages/register/index" hover-class="navigator-hover" open-type="navigate">
+            没有账号？点击注册
+        </navigator>
+    </view>
+</form>
+

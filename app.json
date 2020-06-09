@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/find/index",
+    "pages/article_info/index",
+    "pages/search/index",
+    "pages/user/index",
+    "pages/collect/index",
+    "pages/build/index",
+    "pages/feedback/index",
+    "pages/login/index",
+    "pages/register/index",
+    "pages/dictionary/index",
+    "pages/upavatar/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ca0c16",
+    "navigationBarTitleText": "甲骨文",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ca0c16",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home-s.png"
+      },
+      {
+        "pagePath": "pages/find/index",
+        "text": "发现",
+        "iconPath": "icons/find.png",
+        "selectedIconPath": "icons/find-s.png"
+      },
+      {
+        "pagePath": "pages/build/index",
+        "text": "",
+        "iconPath": "icons/build03.png",
+        "selectedIconPath": "icons/build03.png"
+      },
+      {
+        "pagePath": "pages/dictionary/index",
+        "text": "字典",
+        "iconPath": "icons/search.png",
+        "selectedIconPath": "icons/search-s.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "icons/my.png",
+        "selectedIconPath": "icons/my-s.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

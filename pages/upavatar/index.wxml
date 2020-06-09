@@ -1,0 +1,8 @@
+<!--pages/upavatar/index.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset" enctype="multipart/form-data">
+      <input type="file" id="imageFile" name="image" />
+      guid <input type="text" id="guid" name="guid" />
+      <button form-type="submit">
+            上传
+        </button>
+</form>

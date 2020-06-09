@@ -1,0 +1,28 @@
+<!--pages/search/index.wxml-->
+<view class="search_row">
+    <input value="{{inputValue}}" placeholder="请输入您想搜索的内容" bindinput="handleinput"></input>
+    <!-- 当标签需要频繁隐藏显示时，用hidden最佳 -->
+    <button hidden="" bind:tap="handleSearch">搜索</button>
+</view>
+<view class="search_hot" wx:if="{{isHaveContent}}">
+    <view class="msg">甲骨文发源地</view>
+    <view class="msg">安阳</view>
+    <view class="msg">殷墟</view>
+    <view class="msg">契文</view>
+    <view class="msg">安阳师范学院软件学院</view>
+    <view class="msg">商朝晚期奴隶社会</view>
+    <view class="msg">为什么叫甲骨文</view>
+    <view class="msg">什么是甲骨文</view>
+    <view class="msg">简单甲骨文</view>
+    <view class="msg">象</view>
+    <view class="msg">日</view>
+</view>
+<view class="search_content" wx:else>
+    <navigator class="search_item"
+    url="/pages/article_info/index?articleId={{item.articleId}}"
+    wx:for="{{searchContent}}"
+    wx:key="articleId">
+    {{item.title}}
+    </navigator>
+</view>
+  

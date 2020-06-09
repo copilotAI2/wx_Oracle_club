@@ -1,0 +1,84 @@
+/* pages/article_info/index.wxss */
+page {
+  padding: 20rpx;
+}
+.article_title {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 48rpx;
+  font-weight: 600;
+}
+.article_des {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #666;
+}
+.article_des view {
+  display: flex;
+  align-items: center;
+}
+.article_des view .iconfont {
+  font-size: 48rpx;
+}
+.article_content {
+  color: #666;
+  font-size: 32rpx;
+  padding: 15rpx 0rpx;
+}
+.comment .cmt_header {
+  border-bottom: 1px solid #ccc;
+}
+.comment .cmt_header view {
+  color: #333;
+  font-size: 48rpx;
+  font-weight: 800;
+  border-left: 15rpx solid #ca0c16;
+  padding-left: 20rpx;
+  margin: 20rpx 0;
+}
+.comment .cmt_list .cmt_group {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 12rpx;
+}
+.comment .cmt_list .cmt_group .cmt_des {
+  color: #666;
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+}
+.comment .cmt_list .cmt_group .cmt_des .icon-yonghu {
+  font-size: 56rpx;
+}
+.comment .cmt_list .cmt_group .cmt_des image {
+  width: 10%;
+  border-radius: 50%;
+}
+.comment .cmt_list .cmt_group .cmt_des .user_name {
+  color: #b8860b;
+  font-size: 32rpx;
+  margin: 0 30rpx;
+}
+.comment .cmt_list .cmt_group .cmt_info {
+  margin-left: 66rpx;
+}
+.comment .cmt_list button {
+  background-color: var(--themeColor);
+  color: #fff;
+  width: 100%;
+  margin: 20rpx 0;
+}
+.comment .post_cmt view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15rpx;
+  color: #8f8f94;
+}
+.comment .post_cmt textarea {
+  border: 1px solid #ccc;
+  width: 95%;
+  padding: 15rpx;
+  border-radius: 10rpx;
+}

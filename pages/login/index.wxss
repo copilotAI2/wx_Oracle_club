@@ -1,0 +1,39 @@
+/* pages/login/index.wxss */
+.loginContainer {
+  padding: 20rpx 0;
+}
+.loginContainer .title {
+  text-align: center;
+  font-size: 36rpx;
+}
+.loginContainer .login_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loginContainer .login_form view {
+  margin-top: 20rpx;
+  width: 90%;
+  height: 80rpx;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.loginContainer .login_form view input {
+  width: 90%;
+  height: 80rpx;
+}
+.loginContainer button {
+  width: 70%;
+  margin-top: 40rpx;
+  background-color: #ca0c16;
+  color: #fff;
+}
+.loginContainer .GoToRegister {
+  text-align: center;
+  color: #999;
+  padding: 20rpx 0;
+}

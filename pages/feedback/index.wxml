@@ -1,0 +1,16 @@
+<!--pages/feedback/index.wxml-->
+<view class="feedback_index">
+    <view class="feed_title">欢迎您提出宝贵意见，我们一定会针对具体的情况做出改变。请正确填写您的信息，以便以后更好的沟通联系。</view>
+    <form class="feed_form" bindsubmit="formSubmit" bindreset="formReset">
+        <view class="form_content">
+            <view class="form_list name">姓名<input value="{{name}}" type="text" name="name" placeholder="姓名" placeholder-style="color:#ccc;font-size:28rpx;font-weight:400;"></input></view>
+            <view class="form_list email">邮箱<input value="{{email}}" type="text" name="email" placeholder="电子邮箱" placeholder-style="color:#ccc;font-size:28rpx;font-weight:400;"></input></view>
+            <view class="form_list phone">手机<input value="{{phone}}" type="text" name="phone" placeholder="手机号" placeholder-style="color:#ccc;font-size:28rpx;font-weight:400;"></input></view>
+            <view class="form_list feed_content">内容<textarea value="{{feed_content}}" name="feed_content" placeholder="请填写您要反馈的内容" placeholder-style="color:#ccc;font-size:28rpx;font-weight:400;"></textarea></view>
+        </view>
+        <view class="btn-area">
+            <button class="submit" formType="submit">提交</button>
+            <button class="reset" formType="reset">重填</button>
+        </view>
+    </form>
+</view>

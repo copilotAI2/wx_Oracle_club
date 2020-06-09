@@ -1,0 +1,19 @@
+@import './style/iconfont.wxss';
+page,view,image,text,swipe,swipe-item{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page{
+  /* 全局背景颜色 */
+  background-color: #ececec;
+  /* 定义样式变量主题色 */
+  --themeColor:#ca0c16;/* 使用主题色color：var(--themeColor); */
+  /* 定义基本文字样式 */
+  font-size: 28rpx;
+}
+/* 图片全局样式 */
+image{
+  width: 100%;
+}

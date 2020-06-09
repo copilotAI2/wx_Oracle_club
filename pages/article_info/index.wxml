@@ -1,0 +1,61 @@
+<!--pages/article_info/index.wxml-->
+<wxs src="../../utils/formateDate.wxs" module="tutil" />
+<view class="articleContainer">
+    <view class="article_title">
+        <text>{{articleInfo.title}}</text>
+    </view>
+    <view class="article_des">
+        <view>阅读:{{articleInfo.viewCount}}</view>
+        <!-- <view>时间:{{articleInfo.publishTime}}</view> -->
+        <view>时间:{{tutil.formatTime(articleInfo.publishTime)}}</view>
+        <view bind:tap="handlelikeArticle"><text class="iconfont {{isLike?'icon-dianzan':'icon-dianzan1'}}"></text>赞一个</view>
+    </view>
+    <!-- <view class="article_img">
+        <image src="http://www.barteam.cn:8086/images/news/1.jpg" mode="widthFix"/>
+    </view> -->
+    <view class="article_content">
+        <rich-text nodes="{{articleInfo.content}}">
+        </rich-text>
+    </view>
+    <view class="comment">
+        <view class="cmt_header">
+            <view>观点</view> 
+        </view>
+        <view class="cmt_list">
+            <view class="cmt_group"
+            wx:for="{{commentsList}}"
+            wx:key="commentId">
+                <view class="cmt_des">
+                    <!-- <text class="iconfont icon-yonghu"></text> -->
+                    <!-- <image src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1584359058&di=c03486904c57d2193eb0d29d802f635c&src=http://img3.doubanio.com/view/note/large/public/p35174351.jpg" mode="widthFix"/> -->
+                    <image src="{{item.avatarUrl}}" mode="widthFix"/>
+                    <text class="user_name">{{item.nickName}}</text> 
+                    <text class="cmt_time">{{tutil.formatTime(item.publishTime)}}</text> 
+                </view>
+                <view class="cmt_info">
+                    {{item.content}}
+                </view>
+            </view>
+            <!-- <view class="cmt_group">
+                <view class="cmt_des">
+                    <text class="iconfont icon-yonghu"></text> 
+                    <text class="user_name">匿名用户</text> 
+                    <text class="cmt_time">2020/2/2 17:00</text> 
+                </view>
+                <view class="cmt_info">
+                    666666666666666666
+                </view>
+            </view> -->
+            <button bind:tap="getMoreComments">点击加载更多评论</button>
+        </view>
+        <view class="post_cmt">
+            <view>
+                <text>发表我的评论</text> 
+                <text bind:tap="postComment">发送</text> 
+            </view>
+            <textarea value="{{inputValue}}" bindinput="handleTextarea" name="" id="" cols="30" rows="10" placeholder="优秀观点将在前排展示"></textarea>
+        </view>
+    </view>
+</view>
+  
+  

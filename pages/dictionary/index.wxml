@@ -1,0 +1,17 @@
+<!--pages/dictionary/index.wxml-->
+<view class="search_row">
+    <input value="{{inputValue}}" placeholder="请输入您想搜索的字" bindinput="handleinput"></input>
+    <!-- 当标签需要频繁隐藏显示时，用hidden最佳 -->
+    <button hidden="" bind:tap="handleSearch">查询</button>
+</view>
+<view class="search_content">
+    <view class="charDes">
+        <view class="img" bind:tap="handlePreviewImg" data-url="{{searchContent.CharUrl}}">
+            <!-- <image src="http://www.jgwbwg.com/cn/up/7nyqna0ihqr3tse0hs8xxoq6wu7p0ylwn0voevulk5r1.jpg" mode="widthFix"/> -->
+            <image src="{{searchContent.CharUrl}}" mode="widthFix"/>
+        </view>
+        <view class="word">{{searchContent.CharMsg}}</view>
+    </view>
+</view>
+  
+

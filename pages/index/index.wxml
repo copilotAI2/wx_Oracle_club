@@ -1,0 +1,71 @@
+<!--pages/index/index.wxml-->
+<view>
+    <!-- 搜索框 -->
+    <SearchInput></SearchInput>
+    <!-- <Searchbar></Searchbar> -->
+    <!-- 轮播图 -->
+    <view class="index_swiper">
+        <swiper indicator-dots autoplay interval="1500" circular>
+            <swiper-item wx:for="{{swiperList}}" wx:key="*this"
+            bind:tap="handlePreviewSwiper"
+            data-url="{{item.img_url}}">
+                <!-- <navigator url=""> -->
+                    <image src="{{item.img_url}}" mode="widthFix"/>
+                <!-- </navigator> -->
+            </swiper-item>
+            <!-- <swiper-item>
+                <navigator url="">
+                    <image src="http://imgsrc.baidu.com/baike/pic/item/d4628535e5dde71158f9c5fba9efce1b9d166190.jpg" mode="widthFix"/>
+                </navigator>
+            </swiper-item>
+            <swiper-item>
+                <navigator url="">
+                    <image src="http://5b0988e595225.cdn.sohucs.com/images/20171110/dd1acb36546f4bf2ab2a49bbde318e97.jpg" mode="widthFix"/>
+                </navigator>
+            </swiper-item> -->
+        </swiper>
+    </view>
+    <!-- 分类导航 -->
+    <view class="index_cate">
+        <navigator url="/pages/find/index" bind:tap="isUseTimeTrue" open-type="switchTab" style="color:skyblue;">
+            <text class="iconfont icon-zuixinpeizhi"></text>
+            <text class="txt">最新</text>
+        </navigator>
+        <navigator url="/pages/dictionary/index" open-type="switchTab" style="color:pink;">
+            <text class="iconfont icon-dictionary"></text>
+            <text class="txt">字典</text>
+        </navigator>
+        <navigator url="/pages/find/index" open-type="switchTab" bind:tap="isUseTimeFalse" style="color:#ffcd43;">
+            <text class="iconfont icon-tuijian"></text>
+            <text class="txt">推荐</text>
+        </navigator>
+    </view>
+    <!-- 楼层 -->
+    <view class="index_floor">
+            <view class="floor_title">
+                <text class="">甲骨展列</text>
+            </view>
+            <view class="floor_list">
+                <view url="" class="floor_item"
+                wx:for="{{displayList}}"
+                wx:key="id"
+                bind:tap="handlePreviewImg"
+                data-url="{{item.img_url}}">
+                    <image src="{{item.img_url}}" mode="widthFix"/>
+                </view>
+                <!-- <navigator url="">
+                    <image src="http://www.jgwbwg.com/cn/up/mc0gt1ehberoki42s5pp0sv511ipka6tvvwrhlayc40o.jpg" mode="widthFix"/>
+                </navigator>
+                <navigator url="">
+                    <image src="http://www.jgwbwg.com/cn/up/7nyqna0ihqr3tse0hs8xxoq6wu7p0ylwn0voevulk5r1.jpg" mode="widthFix"/>
+                </navigator>
+                <navigator url="">
+                    <image src="http://www.jgwbwg.com/cn/up/f98v1i2b88u6swa50zc40i0bnc1a1984ppwtbu7gz8q6.jpg" mode="widthFix"/>
+                </navigator>
+                <navigator url="">
+                    <image src="http://www.jgwbwg.com/cn/up/7f9q97fdb3rhwmvaingaqtuhim4mgeneyo3uexitxe3u.jpg" mode="widthFix"/>
+                </navigator> -->
+            </view>
+    </view>
+</view>
+  

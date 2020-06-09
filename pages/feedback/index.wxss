@@ -1,0 +1,49 @@
+.feedback_index {
+  padding: 20rpx;
+}
+.feedback_index .feed_title {
+  color: #333;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+.feedback_index .feed_form .form_content {
+  margin-top: 40rpx;
+}
+.feedback_index .feed_form .form_content .form_list {
+  display: flex;
+  color: #333;
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+.feedback_index .feed_form .form_content .form_list input {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin-left: 20rpx;
+  height: 50rpx;
+  padding: 5rpx;
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 400;
+  width: 60%;
+}
+.feedback_index .feed_form .form_content .form_list textarea {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin-left: 20rpx;
+  padding: 10rpx;
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 400;
+}
+.feedback_index .feed_form .btn-area {
+  display: flex;
+}
+.feedback_index .feed_form .btn-area .submit {
+  background-color: var(--themeColor);
+  color: #fff;
+}
+.feedback_index .feed_form .btn-area .reset {
+  background-color: #dddddd;
+  color: #373737;
+}
